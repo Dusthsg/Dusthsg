@@ -1,0 +1,25 @@
+.fragmentos{
+    position: absolute;
+
+    left: var(--x);
+    top: var(--y);
+
+    width: 100px;
+    height: 100px;
+}
+
+
+.fragmentos{
+    width: 120px;
+    height: 120px;
+
+    background: rgba(128, 0, 255, 0.2);
+
+    clip-path: polygon(
+        50% 0%,
+        100% 40%,
+        80% 100%,
+        20% 100%,
+        0% 40%
+    );
+}

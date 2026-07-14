@@ -1,0 +1,195 @@
+:root {
+    /* --- Cores Base / Primárias --- */
+    --color-bg-main: #030013;       
+    --color-primary: #6900FF;      
+    --color-secondary: #5BC0EB;     
+    
+    /* --- Cores de Acento / Alertas --- */
+    --color-accent-high: #DF2935;   
+    --color-accent-soft: #EE6352;  
+
+    /* --- Estados da Nav Transparente (Silhueta) --- */
+    --color-nav-solid: rgba(29, 30, 44, 0.90);      
+    --color-nav-transparent: rgba(29, 30, 44, 0.15); 
+    --color-nav-border: rgba(91, 192, 235, 0.2);    
+
+    /* --- Tipografia --- */
+    --color-text-pure: #F5F5F5;
+    --color-text-muted: #8E94A5;     /* Texto secundário/apagado */
+
+    /* --- Efeitos --- */
+    --nav-blur: blur(12px);          /* Efeito de vidro focado (backdrop-filter) */
+    --transition-smooth: all 0.3s ease-in-out;
+}
+
+/* ==========================================================================
+   Reset e Configurações padrão
+   ========================================================================== */
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+   background-color: #05000F;
+   color: #f5f5f5;
+
+  }
+
+/* ==========================================================================
+   HEADER & NAVBAR
+   ========================================================================== */
+
+header {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 16px; /* Aumentei um pouco para dar mais respiro aos links */
+    padding: 8px 20px;
+    background-color: rgba(29, 30, 44, 0.6); /* Fundo escuro da paleta com opacidade */
+    border: var(--color-primary) solid 1px; /* Seu roxo puro #6900FF */
+    border-radius: 99px;
+    backdrop-filter: blur(20px);
+  }
+
+  a {
+    text-decoration: none;
+    color: #F5F5F5;
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+
+    &:hover {
+      color: var(--color-secondary); /* Acende em azul celeste ao passar o mouse */
+    }
+  }
+}
+
+.nav-inferior {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%); 
+  z-index: 999;
+  transition: var(--transition-smooth);
+   
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    padding: 12px 28px;
+    background-color: var(--color-nav-solid); 
+    border: 2px solid rgba(105, 0, 255, 0.3); /* Borda roxa sutil */
+    border-radius: 99px;
+    backdrop-filter: var(--nav-blur);
+    -webkit-backdrop-filter: var(--nav-blur);
+    transition: var(--transition-smooth);
+  }
+
+  a {
+    text-decoration: none;
+    color: #F5F5F5;
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+  }
+
+  /* --- COMPORTAMENTOS (Rolar e Passar o Mouse) --- */
+
+  /* Estado de Rolagem (Adicionado via JS): Transparente + Silhueta */
+  &.scrolled ul {
+    background-color: var(--color-nav-transparent);
+    border-color: var(--color-nav-border); /* Silhueta em azul celeste */
+  }
+
+  /* Estado Hover: Se o mouse passar por cima da nav inteira */
+  &:hover ul {
+    background-color: var(--color-nav-solid) !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 8px 32px rgba(105, 0, 255, 0.2);
+  }
+
+  /* Hover específico nos links internos da barra inferior */
+  ul:hover a:hover {
+    color: var(--color-secondary);
+    text-shadow: 0 0 8px var(--color-secondary);
+  }
+}
+
+/* ==========================================================================
+   Main e Conteúdo
+   ========================================================================== */
+main {
+   box-sizing: border-box; /* Faz o padding ficar dentro dos 100vh */
+   padding-top: 80px;
+   background-image: url(imgs/blackpurple.mp4);
+   background-size: cover;
+   height: 93vh;
+  background-position: top center;
+
+   h1 {
+      font-size: clamp(1.8rem, calc(12vw + 1rem), 12rem);
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      color: #e9dede;
+      mix-blend-mode: color-dodge;
+   }
+   h2 {
+      margin: 20px;
+      font-size: clamp(1.8rem, calc(4vw + 1rem), 1rem);;
+   }
+}
+
+/* ==========================================================================
+   Responsividade
+   ========================================================================== */
+ @media (max-width: 320px) {
+  /* Altere para a classe ou tag real da sua barra de ícones */
+  .nav-inferior ul{ 
+    padding: 8px 12px; /* Diminui o espaço interno */
+    gap: 10px;        /* Diminui a distância entre os ícones */
+    width: 100%;       /* Garante que ela não passe da tela */
+  }
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+
+.fragmentos{
+    position: absolute;
+    background-color: #F5F5F5;
+
+    left: var(--x);
+    top: var(--y);
+    justify-content: center;
+    transform: translate(-50%, -50%);
+
+    width: 100px;
+    height: 100px;
+}
+
+
+.fragmentos{
+    width: 120px;
+    height: 120px;
+
+    background: rgba(128, 0, 255, 0.2);
+
+    clip-path: polygon(
+        50% 0%,
+        100% 40%,
+        80% 100%,
+        20% 100%,
+        0% 40%
+    );
+}
