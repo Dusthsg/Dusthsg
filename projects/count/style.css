@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #121212;
+  color: #f5f5f5;
+
+  font-family: "Petit Formal Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.msg {
+  display: none;
+  color: red;
+  margin: 10px;
+}
+
+.space {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #6900ff;
+  background-color: #403f3f;
+  border-radius: 16px;
+  width: clamp(400px, 10vw, 600px);
+  height: 150px;
+  gap: 30px;
+}
+
+.recep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #1100ff;
+  border-radius: 10px;
+  height: 5rem;
+  width: 5rem;
+
+  .number {
+    color: #f5f5f5;
+  }
+}
+
+/*Botões*/
+
+.add {
+  border: 2px solid rgb(55, 255, 0);
+  border-radius: 10px;
+  background-color: rgba(55, 255, 0, 0.5);
+  padding: 5px;
+  height: 2rem;
+  color: #f5f5f5;
+  font-weight: bold;
+
+  font-family: "Petit Formal Script", cursive;
+}
+
+.sub {
+  border: 2px solid rgba(255, 0, 0);
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.5);
+  padding: 5px;
+  height: 2rem;
+  color: #f5f5f5;
+  font-weight: bold;
+
+  font-family: "Petit Formal Script", cursive;
+}
+
+button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
