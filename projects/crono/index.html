@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cronômetro e Horário</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="space">
+        <div class="stopwatch screen" id="stopwatch">
+          <button class="btn-clock" id="btn-clock">Hora Atual</button>
+          <h1 class="timer" id="time">00:00:00</h1>
+          <div class="buttons">
+            <button class="init" id="init">iniciar</button>
+            <button class="pause" id="pause">Pausar</button>
+            <button class="reset" id="reset">resetar</button>
+          </div>
+        </div>
+
+        <div class="clock screen active" id="clock">
+          <button class="btn-stopwatch" id="btn-stopwatch">Cronômetro</button>
+          <h1 class="hour" id="date">00:00:00</h1>
+
+          <p>Hora Atual</p>
+
+        </div>
+      </div>
+    </main>
+     <script src="script.js"></script>
+  </body>
+</html>

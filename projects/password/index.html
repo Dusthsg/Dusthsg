@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="space">
+        <div class="top">
+          <div class="display">
+            <label for="password">Senha</label>
+            <input id="password" readonly placeholder="Password" />
+          </div>
+
+          <!--Lista de Checkboxes-->
+          <div class="checkboxes">
+            <div class="item">
+              <input type="checkbox" name="letras" id="letters" />
+              <label for="letters">Letras</label>
+            </div>
+
+            <div class="item">
+              <input type="checkbox" name="numeros" id="numbers" />
+              <label for="numbers">Números</label>
+            </div>
+
+            <div class="item">
+              <input type="checkbox" name="simbolos" id="symbols" />
+              <label for="symbols">Símbolos</label>
+            </div>
+          </div>
+
+          <div class="length">
+            <label for="length">Comprimento</label>
+            <input id="length" type="number" min="4" max="64" value="12" />
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="nivel">
+            <h3>Fortitude</h3>
+            <div class="level" id="level">
+              <div class="indicator"></div>
+            </div>
+            <p class="description" id="description">...</p>
+          </div>
+
+          <div class="buttons">
+            <button type="button" id="generate">Gerar Senha</button>
+            <button type="button" id="copy">Copiar</button>
+          </div>
+        </div>
+      </div>
+      <section class="dev-tool">
+      <div class="dev-top" id="drag">
+        <div class="points">
+          <div class="point point-red"></div>
+          <div class="point point-yel"></div>
+          <div class="point point-gre"></div>
+
+        </div>
+
+        <div class="exit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </div>
+      </div>
+      <div class="content">
+
+      </div>
+    </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
